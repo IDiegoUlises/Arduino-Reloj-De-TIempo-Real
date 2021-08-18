@@ -1,4 +1,4 @@
-# Arduino-Reloj-De-TIempo-Real
+# Arduino-Reloj-De-Tiempo-Real
 
 Primero como obtiene la fecha en tiempo real??? sin ser configurado 
 
