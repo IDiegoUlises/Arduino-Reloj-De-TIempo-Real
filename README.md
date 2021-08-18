@@ -12,6 +12,10 @@ La principal característica de I2C es que utiliza dos líneas para transmitir l
 
 # Conexion
 
+<img src="https://github.com/IDiegoUlises/Arduino-Reloj-De-Tiempo-Real/blob/main/Imagenes/Conexion-del-modulo-de-reloj.png"  >
+
+# Codigo
+
 ```c++
 #include <Wire.h>
 #include "RTClib.h"
