@@ -14,34 +14,30 @@ La principal característica de I²C es que utiliza dos líneas para transmitir 
 codigo 
 
 ```c++
-//Paso 1
 #include <Wire.h>
 #include "RTClib.h"
 
-//Paso 2
+//Se declara el reloj
 RTC_DS3231 rtc;
 
 void setup () {
-  //Paso 3
+  //Inicia comunicacion
   Serial.begin(9600);
   Wire.begin();
   rtc.begin();
 
-  //Paso 4
-  if (! rtc.begin()) {
-    Serial.println("Couldn't find RTC");
-    while (1);
+  //Verifica que el modulo este conectado
+  if (!rtc.begin()) {
+    Serial.println("El modulo de reloj no esta conectado");
+    //Detecta los pins scla y sda del arduino verifica
+    //que se este enviando datos al modulo y si es asi 
+    //signficada que esta conectado el modulo
   }
 
-  //Paso 5
-  if (rtc.lostPower()) {
-    rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
-    //rtc.adjust(DateTime(2015, 1, 1, 3, 0, 0));
-  }
 }
 
 void loop () {
-  //Paso 6
+  //Imprimir fecha y hora
   DateTime now = rtc.now();
   Serial.print(now.year(), DEC);
   Serial.print('/');
@@ -57,7 +53,6 @@ void loop () {
   Serial.println();
 
   Serial.println();
-  delay(3000);
+  delay(1000);
 }
-
 ```
