@@ -2,6 +2,8 @@
 
 Primero como obtiene la fecha en tiempo real??? sin ser configurado 
 
+dato este modulo no tiene bateria contiene un super condensador alimenta el circuito que guarda la fecha
+
 codigo 
 
 ```c++
